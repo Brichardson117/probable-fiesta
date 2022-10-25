@@ -6,7 +6,7 @@ function getUsers() {
   fetch(userApi).then(function (response) {
     if (response.ok) {
       response.json().then(function (user) {
-        displayUser(user);
+        // displayUser(user);
         console.log(user);
       });
     } else {
@@ -15,9 +15,21 @@ function getUsers() {
   });
 }
 
-function displayUser(users) {
-
+function getPost() {
+    let postApi = "https://jsonplaceholder.typicode.com/posts";
+    fetch(postApi).then(function (response) {
+      if (response.ok) {
+        response.json().then(function (post) {
+        //   displayPost(post);
+          console.log(post);
+        });
+      } else {
+        console.log("issue fetching posts at this time");
+      }
+    });
 }
 
 
-btn.addEventListener('click', getUsers);
+
+
+btn.addEventListener('click', getPost);
