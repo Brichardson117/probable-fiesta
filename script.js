@@ -20,7 +20,7 @@ function getPost() {
   fetch(postApi).then(function (response) {
     if (response.ok) {
       response.json().then(function (post) {
-        //   displayPost(post);
+          displayPost(post);
         console.log(post);
       });
     } else {
@@ -31,12 +31,27 @@ function getPost() {
 
 function displayUser(user) {
  for(let i = 0; i < user.length; i++ ) {
-    let primaryDiv = document.createElement('div')
+    let primaryUserDiv = document.createElement('div')
     let userName = document.createElement('h3')
     userName.textContent = `${user[i].name}`
 
-    primaryDiv.append(userName);
-    document.querySelector("#displayUsers").append(primaryDiv)
+    primaryUserDiv.append(userName);
+    document.querySelector("#displayUsers").append(primaryUserDiv)
+ }
+}
+
+function displayPost(post) {
+   for(let i = 0; i < post.length; i++ ) {
+    let primaryPostDiv = document.createElement('div')
+
+    let postTitle = document.createElement('h2')
+    postTitle.textContent =`${post[i].title}`;
+
+    let postBody = document.createElement('p')
+    postBody.textContent = `${post[i].body}`
+
+    primaryPostDiv.append(postTitle, postBody)
+    document.querySelector("#displayPost").append(primaryPostDiv)
  }
 }
 
