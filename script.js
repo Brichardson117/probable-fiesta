@@ -16,11 +16,11 @@ function getUsers() {
 }
 
 function getPost() {
-  let postApi = "https://jsonplaceholder.typicode.com/posts";
+  let postApi = `https://jsonplaceholder.typicode.com/posts`;
   fetch(postApi).then(function (response) {
     if (response.ok) {
       response.json().then(function (post) {
-          displayPost(post);
+        displayPost(post);
         console.log(post);
       });
     } else {
@@ -30,30 +30,44 @@ function getPost() {
 }
 
 function displayUser(user) {
- for(let i = 0; i < user.length; i++ ) {
-    let primaryUserDiv = document.createElement('div')
-    let userName = document.createElement('h3')
-    userName.textContent = `${user[i].name}`
+  for (let i = 0; i < user.length; i++) {
+    let primaryUserDiv = document.createElement("div");
+    primaryUserDiv.classList = 'card'
 
-    primaryUserDiv.append(userName);
-    document.querySelector("#displayUsers").append(primaryUserDiv)
- }
+    let personName = document.createElement("h2");
+    personName.textContent = `${user[i].name}`;
+   
+
+    let userName = document.createElement('h3')
+    userName.textContent = `User Name: ${user[i].username}`
+
+
+    let profilePic = document.createElement('img')
+    profilePic.src = `./images/image${i}.jpg`
+
+
+    primaryUserDiv.append(profilePic,personName, userName);
+    document.querySelector("#displayUsers").append(primaryUserDiv);
+    
+  }
 }
 
 function displayPost(post) {
-   for(let i = 0; i < post.length; i++ ) {
-    let primaryPostDiv = document.createElement('div')
+  for (let i = 0; i < post.length; i++) {
+    let primaryPostDiv = document.createElement("div");
 
-    let postTitle = document.createElement('h2')
-    postTitle.textContent =`${post[i].title}`;
+    let postTitle = document.createElement("h2");
+    postTitle.textContent = `${post[i].title}`;
 
-    let postBody = document.createElement('p')
-    postBody.textContent = `${post[i].body}`
+    let postBody = document.createElement("p");
+    postBody.textContent = `${post[i].body}`;
 
-    primaryPostDiv.append(postTitle, postBody)
-    document.querySelector("#displayPost").append(primaryPostDiv)
- }
+    primaryPostDiv.append(postTitle, postBody);
+    document.querySelector("#displayPost").append(primaryPostDiv);
+  }
 }
 
-btn.addEventListener("click", getUsers);
+getUsers()
+
+
 postBtn.addEventListener("click", getPost);
