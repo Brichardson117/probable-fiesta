@@ -56,21 +56,11 @@ function getPost(id) {
   });
 }
 
-//display post
+// display post
 function displayPost(post) {
-  for (let i = 0; i < post.length; i++) {
-    let primaryPostDiv = document.createElement("div");
-    
-
-    let postTitle = document.createElement("h2");
-    postTitle.textContent = `${post[i].title}`;
-
-    let postBody = document.createElement("p");
-    postBody.textContent = `${post[i].body}`;
-
-    primaryPostDiv.append(postTitle, postBody);
-    document.querySelector("#displayUsers").append(primaryPostDiv);
-  }
+for(let i = 0; i < post.length; i++) {
+    console.log(post[i])
+}
 }
 
 getUsers();
