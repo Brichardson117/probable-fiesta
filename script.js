@@ -60,6 +60,7 @@ function getPost(userId) {
 function displayPost(post) {
   for (let i = 0; i < post.length; i++) {
     let postDiv = document.createElement("div");
+    postDiv.className = 'postCards'
     
     //get post title
     let postTitle = document.createElement("h3");
@@ -73,7 +74,7 @@ function displayPost(post) {
     postDiv.append(postTitle, postBody);
 
     //display content in console
-    console.log(postDiv);
+    document.querySelector("#displayPost").append(postDiv)
   }
 }
 
