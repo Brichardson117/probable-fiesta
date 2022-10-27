@@ -38,3 +38,11 @@ button {
   color: white;
   border-radius: 15px;
 }
+
+
+#postSection {
+    text-align: center;
+    font-size: 60px;
+    border-bottom: 1px black solid;
+    margin: 5%;
+}
