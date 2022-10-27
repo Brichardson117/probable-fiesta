@@ -34,21 +34,24 @@ function displayUser(user) {
     let postButton = document.createElement('button')
     postButton.textContent = `Display ${user[i].name}'s post`
 
+    let userId = user[i].id
+
+
+
     primaryUserDiv.append(profilePic, personName, userName, postButton);
     document.querySelector("#displayUsers").append(primaryUserDiv);
 
-    postButton.addEventListener('click', getPost(user[i].id));
+    postButton.addEventListener('click', getPost(userId));
   }
 }
 
 //get post
-function getPost(id) {
-  let postApi = `https://jsonplaceholder.typicode.com/posts?userId=${id}`;
+function getPost(userId) {
+  let postApi = `https://jsonplaceholder.typicode.com/posts?userId=${userId}`;
   fetch(postApi).then(function (response) {
     if (response.ok) {
       response.json().then(function (post) {
         displayPost(post);
-        console.log(post);
       });
     } else {
       console.log("issue fetching posts at this time");
@@ -57,9 +60,10 @@ function getPost(id) {
 }
 
 // display post
-function displayPost(post, id) {
+function displayPost(post) {
 for(let i = 0; i < post.length; i++) {
-    // console.log(post[i].userId[id])
+    console.log(post[i].title, post[i].body)
+
 }
 }
 
