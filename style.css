@@ -1,24 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Pacifico&display=swap");
 
-*, body{
+*,
+body {
   font-family: "PT sans", sans-serif;
   background-color: #faf9f5;
 }
 #header {
-    text-align: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    font-size: 60px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  font-size: 60px;
 }
 
-h2,h3{
-    background-color: white;
+h2,
+h3 {
+  background-color: white;
 }
-.main{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content:center;
-    gap: 10px;
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
@@ -26,6 +28,12 @@ h2,h3{
   padding: 40px 10%;
   border-radius: 20px;
   background-color: white;
-  width: 20%;
-  
+  width: 15%;
+}
+
+button {
+  background-color: #6ea3e0;
+  border: #6ea3e0;
+  color: white;
+  border-radius: 15px;
 }

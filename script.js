@@ -57,9 +57,9 @@ function getPost(id) {
 }
 
 // display post
-function displayPost(post) {
+function displayPost(post, id) {
 for(let i = 0; i < post.length; i++) {
-    console.log(post[i])
+    // console.log(post[i].userId[id])
 }
 }
 
