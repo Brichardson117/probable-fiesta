@@ -70,8 +70,10 @@ function displayPost(post) {
     let postBody = document.createElement("p");
     postBody.textContent = `${post[i].body}`;
 
+    let userId = document.createElement('h4')
+    userId.textContent = `User id ${post[i].userId}`
     //append to div
-    postDiv.append(postTitle, postBody);
+    postDiv.append(postTitle,userId ,postBody);
 
     //display content in console
     document.querySelector("#displayPost").append(postDiv)
