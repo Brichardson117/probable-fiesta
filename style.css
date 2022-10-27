@@ -14,11 +14,18 @@
 h2,h3{
     background-color: white;
 }
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 10px;
+}
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   transition: 0.3s;
   padding: 40px 10%;
   border-radius: 20px;
-  justify-content: space-between;
   background-color: white;
+  width: 20%;
+  
 }
