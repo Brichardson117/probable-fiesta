@@ -30,7 +30,7 @@ function displayUser(user) {
     let profilePic = document.createElement("img");
     profilePic.src = `./images/image${i}.jpg`;
 
-    let postButton = document.createElement("button");
+    let postButton = document.createElement('button');
     postButton.textContent = `Display ${user[i].name}'s post`;
 
     let userId = user[i].id;
@@ -70,7 +70,7 @@ function displayPost(post) {
     let postBody = document.createElement("p");
     postBody.textContent = `${post[i].body}`;
 
-    let userId = document.createElement('h4')
+    let userId = document.createElement('h3')
     userId.textContent = `User id ${post[i].userId}`
     //append to div
     postDiv.append(postTitle,userId ,postBody);
