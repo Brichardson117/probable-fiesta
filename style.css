@@ -7,9 +7,9 @@ body {
 }
 #header {
   text-align: center;
-  padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  font-size: 60px;
+  font-size: 30px;
+  border-bottom: 1px solid black;
+  margin: 30px;
 }
 
 h2,
@@ -26,6 +26,7 @@ h3,p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   transition: 0.3s;
   padding: 40px 10%;
+  margin: 20px;
   border-radius: 20px;
   background-color: white;
   width: 15%;

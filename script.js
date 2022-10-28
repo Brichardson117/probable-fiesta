@@ -40,6 +40,7 @@ function displayUser(user) {
 
     postButton.addEventListener("click", getPost(userId));
   }
+  
 }
 
 //get post
